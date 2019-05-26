@@ -1,3 +1,12 @@
+/********************************************************
+ * There is no warranty for this software.
+ * This software you have permission to be copied, 
+ * distributed and/or modify for any purposes, 
+ * except commercial purposes. 
+ * For commercial purposes contacted me:
+ *    diegocueva@gmail.com
+ *    www.diegocueva.com
+ ********************************************************/
 #include <Arduino.h>
 #include <EEPROM.h>
 #include <Wire.h>

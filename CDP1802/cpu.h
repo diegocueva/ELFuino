@@ -1,7 +1,13 @@
+/********************************************************
+ * There is no warranty for this software.
+ * This software you have permission to be copied, 
+ * distributed and/or modify for any purposes, 
+ * except commercial purposes. 
+ * For commercial purposes contacted me:
+ *    diegocueva@gmail.com
+ *    www.diegocueva.com
+ ********************************************************/
 /***********************************************************************
- * 
- *   * https://bitbucket.org/don/cosmac-1802-emulator/src/2158bb8bca59f9a36afbd901e9d46f2be876fdc8/1802%20Emulator/CPU%20Emulation.c?at=master&fileviewer=file-view-default* 
- * 
  * REFERENCES 
  * http://www.cosmacelf.com/publications/data-sheets/cdp1802.pdf
  * http://www.cosmacelf.com/publications/books/cosmac-elf-manual.pdf
