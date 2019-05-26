@@ -24,6 +24,8 @@ void    doEditingOperation(uint8_t state, uint8_t isDown);
 void    doOperateMode(uint8_t mode);
 void    writeHWLeds(uint16_t data);
 void    doReset(uint8_t isDown);
+void    loadEEPROM();
+void    saveEEPROM();
 
 // OPTIONS
 #define  ST_OP_RESET  0b0000

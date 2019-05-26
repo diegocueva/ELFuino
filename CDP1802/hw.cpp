@@ -210,11 +210,11 @@ void doOperateMode(uint8_t mode){
                     lcd.print("**** SAVE ****");
                 }
                 if( readIN()==1 ){
-                    for(int i=0; i<MEM_SIZE || i <1024; i++){
-                        EEPROM.write(i, RD_M(i));
-                    }
                     lcd.setCursor(1, 1);
-                    lcd.print("DONE");                    
+                    lcd.print("Wait...");
+                    saveEEPROM();
+                    lcd.setCursor(1, 1);
+                    lcd.print("* DONE *");                    
                     while( readIN_DOWN() || readIN_UP() );
                 }                
             break;
@@ -226,9 +226,7 @@ void doOperateMode(uint8_t mode){
                     lcd.print("Load program");
                 }
                 if( readIN()==1 ){
-                    for(int i=0; i<MEM_SIZE || i <1024; i++){
-                        WR_M(i, EEPROM.read(i));
-                    }
+                    loadEEPROM();
                     lcd.setCursor(1, 1);
                     lcd.print("DONE");                    
                     while( readIN_DOWN() || readIN_UP() );
@@ -374,4 +372,17 @@ void doReset(uint8_t isDown){
     writeHWLeds(0x0000);
 }
 
+/******************************** LOAD EEPROM ***************************/
+void loadEEPROM(){
+    for(int i=0; i<MEM_SIZE || i <1024; i++){
+        WR_M(i, EEPROM.read(i));
+    }  
+}
+
+/******************************** SAVE EEPROM ***************************/
+void saveEEPROM(){
+    for(int i=0; i<MEM_SIZE || i <1024; i++){
+        EEPROM.write(i, RD_M(i));
+    }  
+}
 
