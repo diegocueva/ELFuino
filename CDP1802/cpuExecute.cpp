@@ -1110,7 +1110,9 @@ void cpu_execute(){
         //   lsb(D)->DF; 
         //   0->msb(D)
         case 0xF6:
+            lsb = cpu.D&0x01;
             cpu.D>>=1;
+            cpu.DF = lsb; 
             cpu.cycles+=2;
         break;
         
@@ -1222,7 +1224,9 @@ void cpu_execute(){
         //   msb(D)->DF; 
         //   0->lsb(D)
         case 0xFE:
+            msb = cpu.D&0b10000000?1:0;
             cpu.D<<=1;
+            cpu.DF = msb;
             cpu.cycles+=2;
         break;
         
@@ -1244,4 +1248,3 @@ void cpu_execute(){
     }
 
 }
-

@@ -1,0 +1,19 @@
+
+1.- Presentation. 
+   Running "bit walk" program
+   General HW presentation 
+   Edit mode
+       read
+	   wrte
+	   
+2.- Hardware building
+   Switchs
+   Q led
+   16 bit IO
+   LCD
+ 
+3.- Assembling
+
+4.- Basic program
+
+   

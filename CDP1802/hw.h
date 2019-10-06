@@ -44,7 +44,7 @@ void    saveEEPROM();
 
 #define  ST_OP_LOAD   0b1101
 #define  ST_OP_SAVE   0b1110
-#define  ST_OP_NONEB  0b1111
+#define  ST_OP_NONOPT 0b1111
 
 // RUN
 #define  ST_RN_RUN    0b0001
@@ -63,5 +63,3 @@ void    saveEEPROM();
 
 
 #endif 
-
-
